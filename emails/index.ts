@@ -10,7 +10,7 @@ const sendMail = buildSendMail({
       pass: process.env.POSTMARK_API_KEY,
     },
   }),
-  defaultFrom: "Dub.sh <system@dub.sh>",
+  defaultFrom: "Dub <system@dub.sh>",
   configPath: "./mailing.config.json",
 });
 
