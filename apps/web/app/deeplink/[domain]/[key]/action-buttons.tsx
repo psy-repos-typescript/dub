@@ -8,7 +8,7 @@ export function DeepLinkActionButtons({ link }: { link: EdgeLinkProps }) {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <a href={link.shortLink} className="w-full">
+      <a href={link.shortLink} target="_blank" className="w-full">
         <Button
           text="Open in the app"
           className="h-12 w-full rounded-xl bg-neutral-900 text-white"
@@ -18,7 +18,11 @@ export function DeepLinkActionButtons({ link }: { link: EdgeLinkProps }) {
         />
       </a>
 
-      <a href={link.shortLink} className="text-sm text-neutral-500">
+      <a
+        href={link.shortLink}
+        target="_blank"
+        className="text-sm text-neutral-500"
+      >
         Open in the app without copying
       </a>
     </div>
