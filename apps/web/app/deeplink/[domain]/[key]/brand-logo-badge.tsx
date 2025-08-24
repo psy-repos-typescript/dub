@@ -8,11 +8,9 @@ export function BrandLogoBadge({ link }: { link: EdgeLinkProps }) {
   const [_copied, copyToClipboard] = useCopyToClipboard();
 
   return (
-    <button
-      onClick={() => {
-        copyToClipboard(link.shortLink);
-        window.location.href = link.shortLink;
-      }}
+    <a
+      onClick={() => copyToClipboard(link.shortLink)}
+      href={link.shortLink}
       className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 shadow-lg shadow-black/10 ring-1 ring-neutral-200"
     >
       <img
@@ -22,6 +20,6 @@ export function BrandLogoBadge({ link }: { link: EdgeLinkProps }) {
       <div className="pr-1.5 text-lg font-semibold text-neutral-900">
         {getApexDomain(link.url)}
       </div>
-    </button>
+    </a>
   );
 }
